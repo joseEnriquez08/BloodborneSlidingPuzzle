@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0-0" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVA-6Q-4ab">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poweroff" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVA-6Q-4ab">
                                 <rect key="frame" x="20" y="117" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
@@ -149,11 +150,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="ImageView00" destination="JVA-6Q-4ab" id="Xvr-7m-ojg"/>
+                        <outlet property="hole" destination="JVA-6Q-4ab" id="NXv-8P-DP6"/>
                         <outlet property="tile01" destination="LyS-5n-hGf" id="tbr-fj-4PF"/>
                         <outlet property="tile02" destination="hL1-U8-kHx" id="h9n-az-2yX"/>
                         <outlet property="tile03" destination="6R7-wd-TF8" id="vSc-oo-WRE"/>
-                        <outlet property="tile04" destination="Mco-AS-UPg" id="xCe-wH-5oM"/>
+                        <outlet property="tile10" destination="Mco-AS-UPg" id="nTv-eF-UNa"/>
                         <outlet property="tile11" destination="peP-DO-TFz" id="WFZ-wH-z15"/>
                         <outlet property="tile12" destination="J64-V9-YOY" id="vmn-id-ySk"/>
                         <outlet property="tile13" destination="WHL-Ww-8fi" id="kMR-PQ-fsD"/>
@@ -177,7 +178,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0-0" width="494" height="494"/>
         <image name="0-1" width="494" height="495"/>
         <image name="0-2" width="494" height="495"/>
         <image name="0-3" width="494" height="495"/>
@@ -197,6 +197,7 @@
         <image name="3-2" width="495" height="495"/>
         <image name="3-3" width="495" height="495"/>
         <image name="3-4" width="495" height="495"/>
+        <image name="poweroff" catalog="system" width="128" height="121"/>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
