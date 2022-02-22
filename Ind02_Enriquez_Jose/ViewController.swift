@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var holeCoordinates = (r:0,c:0)
     //variables for all tiles identified by (row, column)
     
+    @IBOutlet weak var answer: UIImageView!
     @IBOutlet weak var hole: UIImageView!
     @IBOutlet weak var tile01: UIImageView!
     @IBOutlet weak var tile02: UIImageView!
@@ -84,18 +85,34 @@ class ViewController: UIViewController {
     }
     
     
-    
-    @IBAction func showAnswer(_ sender: Any) {
-        tiles = answerKey
+       
+    @IBAction func showAnswer(_ sender: UIButton) {
+        
+        if sender.titleLabel?.text == "Show Answer"{
+            
+            self.view.bringSubviewToFront(answer)
+            answer.isHidden = false;
+            sender.setTitle("Hide Answer", for: .normal)
+            
+        }
+        if sender.titleLabel?.text == "Hide Answer" {
+            self.view.sendSubviewToBack(answer)
+            answer.isHidden = true;
+            sender.setTitle("Show Answer", for: .normal)
+            
+        }
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadArray()
+        //self.view.bringSubviewToFront(answer)
         
         //swap(i: 1, j: 1)
-        print("reach")
+        
         // Do any additional setup after loading the view.
        
         
