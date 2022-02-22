@@ -32,11 +32,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1-0" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyS-5n-hGf">
-                                <rect key="frame" x="110" y="117" width="93" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3-0" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6R7-wd-TF8">
                                 <rect key="frame" x="290" y="117" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -129,6 +124,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Shuffle">
                                     <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="shuffle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ikw-jU-9YC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84K-aQ-GUp">
                                 <rect key="frame" x="141" y="720" width="132" height="40"/>
@@ -137,11 +135,41 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Show Answer">
                                     <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ozF-ld-Qii"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1-0" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyS-5n-hGf">
+                                <rect key="frame" x="110" y="117" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="ImageView00" destination="JVA-6Q-4ab" id="Xvr-7m-ojg"/>
+                        <outlet property="tile01" destination="LyS-5n-hGf" id="tbr-fj-4PF"/>
+                        <outlet property="tile02" destination="hL1-U8-kHx" id="h9n-az-2yX"/>
+                        <outlet property="tile03" destination="6R7-wd-TF8" id="vSc-oo-WRE"/>
+                        <outlet property="tile04" destination="Mco-AS-UPg" id="xCe-wH-5oM"/>
+                        <outlet property="tile11" destination="peP-DO-TFz" id="WFZ-wH-z15"/>
+                        <outlet property="tile12" destination="J64-V9-YOY" id="vmn-id-ySk"/>
+                        <outlet property="tile13" destination="WHL-Ww-8fi" id="kMR-PQ-fsD"/>
+                        <outlet property="tile20" destination="bWE-Se-Q5p" id="R5n-7G-rOq"/>
+                        <outlet property="tile21" destination="js8-Hv-NaP" id="5wt-tD-zTW"/>
+                        <outlet property="tile22" destination="xML-Nw-yz1" id="gje-Hm-fQD"/>
+                        <outlet property="tile23" destination="ucN-aw-D2N" id="m7c-sM-ysi"/>
+                        <outlet property="tile30" destination="JbY-Mx-cg4" id="Gli-yo-Mxe"/>
+                        <outlet property="tile31" destination="dtP-hY-lOv" id="azi-ga-oJY"/>
+                        <outlet property="tile32" destination="Krf-jI-Whz" id="nOF-vc-FFC"/>
+                        <outlet property="tile33" destination="nnw-E2-S0f" id="o6k-sr-h2V"/>
+                        <outlet property="tile40" destination="Rk0-qq-k0E" id="DUk-WY-ZXH"/>
+                        <outlet property="tile41" destination="X7K-K3-Vbs" id="JbZ-8j-lgm"/>
+                        <outlet property="tile42" destination="OvS-oM-S5g" id="Tbg-U4-TJo"/>
+                        <outlet property="tile43" destination="YCa-O0-39P" id="UqB-Wp-5Bx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
