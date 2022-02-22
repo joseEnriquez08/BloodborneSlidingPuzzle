@@ -55,6 +55,9 @@ class ViewController: UIViewController {
     }
 
     
+    @IBAction func tapHandler(_ sender: UITapGestureRecognizer) {
+        
+    }
     
     @IBAction func shuffle(_ sender: UIButton) {
         var successfullSwap = 0
