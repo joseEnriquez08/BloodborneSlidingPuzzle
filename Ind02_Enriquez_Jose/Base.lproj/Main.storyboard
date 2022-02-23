@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjK-g5-0El">
-                                <rect key="frame" x="161" y="634" width="85" height="41"/>
+                                <rect key="frame" x="121" y="630" width="150" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Shuffle">
@@ -32,17 +32,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="shuffle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ikw-jU-9YC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84K-aQ-GUp">
-                                <rect key="frame" x="141" y="720" width="132" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Show Answer">
-                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fb3-cb-KaD"/>
                                 </connections>
                             </button>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="answer" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBH-B1-mIt">
@@ -229,6 +218,17 @@
                                     <outletCollection property="gestureRecognizers" destination="H8Z-Th-IIi" appends="YES" id="9SZ-wY-o93"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84K-aQ-GUp">
+                                <rect key="frame" x="121" y="718" width="150" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Show Answer">
+                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fb3-cb-KaD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,6 +236,7 @@
                     <connections>
                         <outlet property="answer" destination="GBH-B1-mIt" id="fTV-ad-CTs"/>
                         <outlet property="hole" destination="JVA-6Q-4ab" id="NXv-8P-DP6"/>
+                        <outlet property="shuffleButton" destination="UjK-g5-0El" id="HFQ-Jr-bjA"/>
                         <outlet property="tile01" destination="LyS-5n-hGf" id="tbr-fj-4PF"/>
                         <outlet property="tile02" destination="hL1-U8-kHx" id="h9n-az-2yX"/>
                         <outlet property="tile03" destination="6R7-wd-TF8" id="vSc-oo-WRE"/>

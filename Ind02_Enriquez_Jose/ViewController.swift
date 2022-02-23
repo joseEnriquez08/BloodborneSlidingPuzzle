@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     var holeCoordinates = (r:0,c:0)
     
     var holeImage = UIImage(named: "poweroff")
+    var buttonColor = UIColor.blue
     
+    @IBOutlet weak var shuffleButton: UIButton!
     //contains image of the answer
     @IBOutlet weak var answer: UIImageView!
     
@@ -42,28 +44,38 @@ class ViewController: UIViewController {
     
     //2d array to keep track of where all the tiles are at
     var tiles = [[UIImageView]]()
-    var answerKey = [[UIImageView]]()
-    
+    var answerKey = [[UIImage]]()
+   
    
    /*
     loads all the imageviews in the corresponding place in the 2d array
     */
     func loadArray() -> Void{
         holeImage = hole.image
+        
         tiles = [[hole, tile01, tile02, tile03],
                  [tile10, tile11, tile12, tile13],
                  [tile20, tile21, tile22, tile23],
                  [tile30, tile31, tile32, tile33],
                  [tile40, tile41, tile42, tile43],]
-        answerKey = [[hole, tile01, tile02, tile03],
-                 [tile10, tile11, tile12, tile13],
-                 [tile20, tile21, tile22, tile23],
-                 [tile30, tile31, tile32, tile33],
-                 [tile40, tile41, tile42, tile43],]
+//        answerKey = [[hole, tile01, tile02, tile03],
+//                 [tile10, tile11, tile12, tile13],
+//                 [tile20, tile21, tile22, tile23],
+//                 [tile30, tile31, tile32, tile33],
+//                 [tile40, tile41, tile42, tile43],]
+        answerKey = [[hole.image!, tile01.image!, tile02.image!, tile03.image!],
+                     [tile10.image!, tile11.image!, tile12.image!, tile13.image!],
+                     [tile20.image!, tile21.image!, tile22.image!, tile23.image!],
+                     [tile30.image!, tile31.image!, tile32.image!, tile33.image!],
+                     [tile40.image!, tile41.image!, tile42.image!, tile43.image!],]
     }
 
     
     @IBAction func tapHandler(_ sender: UITapGestureRecognizer) {
+        if shuffleButton.titleLabel?.text == "Solved! Shuffle Again?"{
+            
+        }
+        
         if sender.view as? UIImageView == hole{
             print("tapped hole")
         } else {
@@ -83,14 +95,39 @@ class ViewController: UIViewController {
                holeCoordinates != (tappedRow, tappedColumn) {
                 //we have located where the cooridnates of the tapped tile and confirmed
                 //theyare adjacent to the hole and are valid for swapping
+                
+                    if shuffleButton.titleLabel?.text == "Solved! Shuffle Again?"{
+                        shuffleButton.setTitle("Shuffle", for: .normal)
+                        shuffleButton.backgroundColor = UIColor.clear
+                        
+                    }
                       
                     swap(i: tappedRow, j: tappedColumn)
+                    checkWin()
                     break
                 }
             tappedRow = tappedRow + 1
         }
     }
     
+    func checkWin() -> Void {
+        //var win: Bool
+        for i in 0...4 {
+            for j in 0...3 {
+                if answerKey[i][j] != tiles[i][j].image{
+                    //win = false
+                    return
+                }
+            }
+        }
+        
+        //you have won
+        shuffleButton.setTitle("Solved! Shuffle Again?", for: .normal)
+        shuffleButton.backgroundColor = UIColor.green
+        //shuffleButton.sizeToFit()
+        
+        
+    }
     
     
     /*
@@ -99,6 +136,11 @@ class ViewController: UIViewController {
      then swaping the hole with the new coordinates
      */
     @IBAction func shuffle(_ sender: UIButton) {
+        
+        if sender.titleLabel?.text == "Solved! Shuffle Again?" {
+            sender.setTitle("Shuffle", for: .normal)
+            shuffleButton.backgroundColor = UIColor.clear
+        }
         
         //keeps track of how many swaps have occured
         var successfullSwap = 0
