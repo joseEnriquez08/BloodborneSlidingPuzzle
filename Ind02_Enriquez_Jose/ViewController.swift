@@ -69,6 +69,26 @@ class ViewController: UIViewController {
         } else {
             print("Did not tap hole")
         }
+        
+        var tappedRow = 0
+        var tappedColumn = 0
+        
+        while(tappedRow <= 4){
+            
+            tappedColumn = tiles[tappedRow].firstIndex(of: sender.view as! UIImageView) ?? -1
+            
+            if tappedColumn != -1 &&
+               abs(holeCoordinates.r-tappedRow) <= 1 &&
+               abs(holeCoordinates.c-tappedColumn) <= 1 &&
+               holeCoordinates != (tappedRow, tappedColumn) {
+                //we have located where the cooridnates of the tapped tile and confirmed
+                //theyare adjacent to the hole and are valid for swapping
+                      
+                    swap(i: tappedRow, j: tappedColumn)
+                    break
+                }
+            tappedRow = tappedRow + 1
+        }
     }
     
     
