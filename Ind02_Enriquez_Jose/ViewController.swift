@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     // tuple to keep track of the where the hole is at. (Row,Column)
     var holeCoordinates = (r:0,c:0)
     
+    var holeImage = UIImage(named: "poweroff")
+    
     //contains image of the answer
     @IBOutlet weak var answer: UIImageView!
     
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
     loads all the imageviews in the corresponding place in the 2d array
     */
     func loadArray() -> Void{
+        holeImage = hole.image
         tiles = [[hole, tile01, tile02, tile03],
                  [tile10, tile11, tile12, tile13],
                  [tile20, tile21, tile22, tile23],
@@ -81,7 +84,7 @@ class ViewController: UIViewController {
         var successfullSwap = 0
         
         //will swap until we have sufficient numbers of swaps to shuffle the tiles
-        while(successfullSwap < 3){
+        while(successfullSwap < 25){
             
             //Gets random coordinates of the tile we are attempting to swap. T
             //tilesR corresponds to the row
@@ -110,29 +113,11 @@ class ViewController: UIViewController {
         print("Before swap, hole is at \(holeCoordinates.r), \(holeCoordinates.c)")
         print("Hole will swap with \(i) and \(j)")
         
-        // other ways ive tried to swap
-//        hole.frame = tiles[i][j].frame
-//        tiles[i][j].frame = hole.frame
-
-//        (hole.frame, tiles[i][j].frame) = (tiles[i][j].frame, hole.frame)
+        let temp3 = tiles[i][j].image
+        tiles[i][j].image = holeImage
+        tiles[holeCoordinates.r][holeCoordinates.c].image = temp3
         
-//        var tFrame = tiles[i][j].frame
-//        tiles[i][j].frame = hole.frame
-//        hole.frame = tFrame
-        
-        //swaps the actual images
-//        let temp = tiles[i][j].image
-//        tiles[i][j].image = tiles[holeCoordinates.r][holeCoordinates.c].image
-//        //hole.image = temp
-//        tiles[holeCoordinates.r][holeCoordinates.c].image = temp
-        
-        //swaps the UIIMAGE in the 2d array
-        let temp2 = tiles[i][j]
-        tiles[i][j] = tiles[holeCoordinates.r][holeCoordinates.c]
-        hole = temp2
-        tiles[holeCoordinates.r][holeCoordinates.c] = temp2
-        
-        
+        hole = tiles[i][j]
         holeCoordinates = (i, j)
         
         print("After swap, hole is at \(holeCoordinates.r), \(holeCoordinates.c)")
