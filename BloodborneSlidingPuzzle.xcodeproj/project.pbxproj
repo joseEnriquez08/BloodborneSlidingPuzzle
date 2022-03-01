@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7253B37427BB0B8E00057FCD /* Ind02_Enriquez_Jose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ind02_Enriquez_Jose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7253B37427BB0B8E00057FCD /* BloodborneSlidingPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodborneSlidingPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7253B37727BB0B8E00057FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7253B37927BB0B8E00057FCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7253B37B27BB0B8E00057FCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		7253B37527BB0B8E00057FCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7253B37427BB0B8E00057FCD /* Ind02_Enriquez_Jose.app */,
+				7253B37427BB0B8E00057FCD /* BloodborneSlidingPuzzle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7253B37327BB0B8E00057FCD /* Ind02_Enriquez_Jose */ = {
+		7253B37327BB0B8E00057FCD /* BloodborneSlidingPuzzle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7253B38827BB0B9000057FCD /* Build configuration list for PBXNativeTarget "Ind02_Enriquez_Jose" */;
+			buildConfigurationList = 7253B38827BB0B9000057FCD /* Build configuration list for PBXNativeTarget "BloodborneSlidingPuzzle" */;
 			buildPhases = (
 				7253B37027BB0B8E00057FCD /* Sources */,
 				7253B37127BB0B8E00057FCD /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Ind02_Enriquez_Jose;
+			name = BloodborneSlidingPuzzle;
 			productName = Ind02_Enriquez_Jose;
-			productReference = 7253B37427BB0B8E00057FCD /* Ind02_Enriquez_Jose.app */;
+			productReference = 7253B37427BB0B8E00057FCD /* BloodborneSlidingPuzzle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7253B36F27BB0B8E00057FCD /* Build configuration list for PBXProject "Ind02_Enriquez_Jose" */;
+			buildConfigurationList = 7253B36F27BB0B8E00057FCD /* Build configuration list for PBXProject "BloodborneSlidingPuzzle" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7253B37327BB0B8E00057FCD /* Ind02_Enriquez_Jose */,
+				7253B37327BB0B8E00057FCD /* BloodborneSlidingPuzzle */,
 			);
 		};
 /* End PBXProject section */
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7253B36F27BB0B8E00057FCD /* Build configuration list for PBXProject "Ind02_Enriquez_Jose" */ = {
+		7253B36F27BB0B8E00057FCD /* Build configuration list for PBXProject "BloodborneSlidingPuzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7253B38627BB0B9000057FCD /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7253B38827BB0B9000057FCD /* Build configuration list for PBXNativeTarget "Ind02_Enriquez_Jose" */ = {
+		7253B38827BB0B9000057FCD /* Build configuration list for PBXNativeTarget "BloodborneSlidingPuzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7253B38927BB0B9000057FCD /* Debug */,
